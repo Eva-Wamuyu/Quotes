@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.btnCta{
+  background-color: #692705;
+  color: #ffff;
+}
+.btnLess{
+  background-color: #Efc7bc;
+}
