@@ -12,6 +12,16 @@ export class FormComponent implements OnInit {
   alertErrorShow = "d-none";
 
   @Output() postingQuote = new EventEmitter<Quoteclass>();
+
+  // addPostedQuote(){
+    
+  // }
+
+  clearForm(){
+    this.postedQuote.author = '';
+    this.postedQuote.quote = ''
+    this.postedQuote.publisher = '';
+  }
   // addedAuthor!: string;
   // addedQuote: string = '';
   // addedPublisher: string = '';
@@ -23,21 +33,11 @@ export class FormComponent implements OnInit {
     }
     else{
       this.alertErrorShow = "d-none";
-      
-
+      this.postingQuote.emit(this.postedQuote);
       this.clearForm();
 
     }
-   
   }
-
-  clearForm(){
-    this.postedQuote.author = '';
-    this.postedQuote.quote = ''
-    this.postedQuote.publisher = '';
-  }
-
-
 
   constructor() { }
 

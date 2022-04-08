@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Quoteclass } from 'src/app/quoteclass';
 @Component({
   selector: 'app-quotelist',
@@ -8,7 +8,6 @@ import { Quoteclass } from 'src/app/quoteclass';
 export class QuotelistComponent implements OnInit {
 
   allQuotes: Quoteclass[] = [
-
     new Quoteclass ("abcd","aaaaa","aaaaa"),
     new Quoteclass ("abcd","aaaaa","aaaaa"),
     new Quoteclass ("abcd","aaaaa","aaaaa"),
@@ -16,6 +15,24 @@ export class QuotelistComponent implements OnInit {
 
   ]
 
+  @Input() allQuotez = Quoteclass;
+
+  postingQuote(){
+    this.allQuotes.push()
+  }
+
+  addQuote(){
+
+  }
+
+  deleteQuote(){
+    this.allQuotes.splice(0,1);
+    console.log("2");
+  }
+
+
+
+ 
   constructor() { }
 
   ngOnInit(): void {
