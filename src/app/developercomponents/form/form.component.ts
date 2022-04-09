@@ -8,7 +8,9 @@ import { Quoteclass } from 'src/app/quoteclass';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  postedQuote = new Quoteclass ("", "", "");
+
+  datePosted = new Date();
+  postedQuote = new Quoteclass ("", "", "", new Date(), 0, 0);
   alertErrorShow = "d-none";
 
   @Output() postingQuote = new EventEmitter<Quoteclass>();
@@ -30,13 +32,14 @@ export class FormComponent implements OnInit {
   addPostedQuote = () => {
     if(this.postedQuote.author === "" || this.postedQuote.quote === ""|| this.postedQuote.publisher === ""){ 
       this.alertErrorShow = "d-block";
-      return;
+      return
     }
     else{
       this.alertErrorShow = "d-none";
       this.postingQuote.emit(this.postedQuote);
       console.log(this.postedQuote);
-      this.clearForm();
+      console.log(this.datePosted);
+      // this.clearForm();
      
 
     }

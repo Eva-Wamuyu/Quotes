@@ -1,24 +1,31 @@
-<p>quotelist works!</p>
+<div class="container"> 
+  <div class="row m-auto" >
+    <div class="col-sm-12 col-md-6 quote" *ngFor="let quote of allQuotes; let i = index">
+        <p>
+          {{quote.quote}}
+        </p>
+        <button class="btn btnCta" (click)="toggleDetails(i)"> {{buttonMsg}} </button> 
+        <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
+    </div>
 
-
-<div> 
-
-
-  <div *ngFor="let quote of allQuotes; let i = index">
-    <p>
-      {{quote.quote}}
-    </p>
-
-    <button class="btn btnCta" (click)="toggleDetails(i)"> {{buttonMsg}} </button> 
-    <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
-  
+    <div class="col-sm-12 m-auto">
+      <app-form (postingQuote) = 'pushIntoQuotesArr($event)'></app-form>
+    </div>
+   
   </div>
+</div>
+
+   
+
+   
+  
 
 
 
-  <app-quotecomponent></app-quotecomponent>
-  <app-form (postingQuote) = 'pushIntoQuotesArr($event)'></app-form>
+
+  <!-- <app-quotecomponent></app-quotecomponent> -->
+  
  
   <!-- <app-quotecomponent></app-quotecomponent> -->
  
-</div>
+

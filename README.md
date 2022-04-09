@@ -6,6 +6,7 @@
 The site allows the user to add, delete and upvote or downvote a quote.
 
 ## Live-Link
+https://eva-wamuyu.github.io/Quotes/
 
 ##  Installation
 

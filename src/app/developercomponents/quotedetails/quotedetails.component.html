@@ -1,6 +1,3 @@
-<p>quotedetails works!</p>
-
-
 <div class="details">
   <h3>
     {{quotes.author}}
@@ -10,13 +7,20 @@
     Posted  daysPassed By  {{quotes.publisher}}  
   </p>
 
+  <p>
+    Upvotes: {{quotes.upvotes}}
+  </p>
+  <p>
+    Downvotes: {{quotes.downvotes}}
+  </p>
 
-  <!-- <button (click)="addUpvotes()">
-    upvote
+
+  <button (click)="addUpvotes(quotes.upvotes)">
+    <i class="fas fa-heart"></i>
   </button>
-  <button (click)="addDownVotes()">
+  <button (click)="addDownvotes()">
     downvote
-  </button>  -->
+  </button> 
 
 
   <button class="btn btnLess" (click)="deleteQuote(true)"> Delete </button> 

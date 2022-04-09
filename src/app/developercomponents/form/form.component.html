@@ -1,5 +1,5 @@
 
-<form action="">
+<form  (ngSubmit)="addPostedQuote()" #form='ngForm' class="w-75 m-auto" id="form">
    <h4> Add A Quote </h4>
    <div class="alert  alert-danger form-control py-1 {{alertErrorShow}}" role="alert"> All fields are required </div>
   <div class="form-group">
@@ -20,7 +20,7 @@
 
 
   <div class="div mt-2">
-  <button type="submit" class="btn btnCta float-start px-3" (click)="addPostedQuote()">Post</button>
+  <button type="submit" class="btn btnCta float-start px-3" >Post</button>
   <button class="btn btnLess float-end px-3" (click)="clearForm()"> Clear</button>
   </div>
  

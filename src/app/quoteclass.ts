@@ -4,15 +4,16 @@ export class Quoteclass {
   // public quote:string = '';
   // public owner:string = '';
   showDetails!: boolean;
-  upvotes!: number;
-  downvotes!: number;
+  // upvotes!: number;
+  // downvotes!: number;
+  
   
 
-  constructor(public quote:string,public author:string,public publisher:string){
+  constructor(public quote:string,public author:string,public publisher:string, public dateAdded:Date, public upvotes:number, public downvotes:number){
 
     this.showDetails = false;
-    this.upvotes = 0;
-    this.downvotes = 0;
+   
+   
     
   }
 
