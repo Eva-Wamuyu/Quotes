@@ -25,10 +25,15 @@ export class QuotelistComponent implements OnInit {
 
   }
 
-  deleteQuote(){
-    this.allQuotes.splice(0,1);
-    console.log("2");
+  deleteQuoteNow(toDelete:any, index:number){
+    if(toDelete){
+      console.log("2");
+      this.allQuotes.splice(index, 1);
+
+    }
   }
+
+   
 
 
 

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 import { Quoteclass } from 'src/app/quoteclass';
+
 
 
 @Component({
@@ -10,15 +11,21 @@ import { Quoteclass } from 'src/app/quoteclass';
 export class QuotecomponentComponent implements OnInit {
 
   @Input() quote! : Quoteclass;
+  @Output() toDelete = new EventEmitter<boolean>();
   buttonMsg = "Show more";
   showDetails = false;
+
  
   
-  deleteQuote(){
-
-
+  deleteQuote(del:boolean){
+    this.toDelete.emit(del);
+    
+      
+    
   }
 
+
+ 
   toggleDetails(){
     this.buttonMsg == "show less"? this.buttonMsg="show more": this.buttonMsg="Hide Details";
     this.showDetails = !this.showDetails; 

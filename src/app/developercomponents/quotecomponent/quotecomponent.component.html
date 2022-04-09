@@ -1,8 +1,8 @@
 <p>quotecomponent works!</p>
-
- <div class="col-md-3"> 
+<!-- 
+ <div class="col-md-3" *ngFor="let quote of allQuotes"> 
   <div class="div"> 
-  <!-- <p>
+  <p>
     <span class="quotes">''</span>
    {{ quote.quote}}
     <span class="quotes">''</span>
@@ -14,9 +14,21 @@
 </p>
 <p>
   Posted <span>  timepassed </span> By <span> {{quote.publisher}} </span>
-</p>  -->
+</p> 
 
-<div>
+<div *ngIf="showDetails" class="details">
+
+  <button class="btn btnLess" (click)="deleteQuote()">Delete</button>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing. </p>
+  <p>
+    By <span> {{quote.author}} </span>
+  </p>
+  <p>
+    Posted <span>  timepassed </span> By <span> {{quote.publisher}} </span>
+  </p>  -->
+ <!-- </div>
+
+<div> -->
 
 
 <!-- 
@@ -27,25 +39,25 @@
   downvote
 </button>  -->
 
-<button class="btn btnCta" (click)="toggleDetails()"> {{buttonMsg}} </button>
+ <button class="btn btnCta" (click)="toggleDetails()"> {{buttonMsg}} </button> 
 
-</div> 
+<!-- </div> 
 </div>
 
-</div>
+</div>  -->
 
 
-<div *ngIf="showDetails" class="details">
+<!-- <div *ngIf="showDetails" class="details"> -->
 
-  <button class="btn btnLess" (click)="deleteQuote()">Delete</button>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing. </p>
-  <!-- <p>
+   <button class="btn btnLess" (click)="deleteQuote(true)"> Delete </button> 
+ <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing. </p>
+   <p>
     By <span> {{quote.author}} </span>
   </p>
   <p>
     Posted <span>  timepassed </span> By <span> {{quote.publisher}} </span>
-  </p>  -->
- </div>
+  </p>  --> 
+ 
 
 
 
