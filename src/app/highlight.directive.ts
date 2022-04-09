@@ -1,12 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[appHighlighter]'
 })
 export class HighlightDirective {
 
-  constructor() {
+  constructor(elem:ElementRef) {
     
+    elem.nativeElement.style.boxshadow = '2px 2px black';
+       
    }
 
 }

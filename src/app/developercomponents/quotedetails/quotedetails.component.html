@@ -1,21 +1,29 @@
-<div class="details">
-  <h3>
+<div class="details d-flex flex-column">
+  <div>
+
+  <h4>
     {{quotes.author}}
-  </h3>
+  </h4>
 
   <p>
     Posted  daysPassed By  {{quotes.publisher}}  
   </p>
-
-  <button (click)="addUpvotes(quotes.upvotes)">
+</div>
+<div>
+  
+  <button (click)="addUpvotes(quotes.upvotes)" class="float-start btn">
     <i class="fa fa-thumbs-up"></i> <span> {{quotes.upvotes}} </span>
   </button>
-  <button (click)="addDownvotes()">
+  <button (click)="addDownvotes()" class="float-end btn ">
     <i class="fa fa-thumbs-down"></i> <span> {{quotes.downvotes}} </span>
   </button> 
+</div>
 
+<div class="del">
+  <button class="btn" (click)="deleteQuote(true)"> <i class="fa fa-trash" aria-hidden="true"></i></button> 
 
-  <button class="btn btnLess" (click)="deleteQuote(true)"> Delete </button> 
+</div>
+ 
 
 </div>
 

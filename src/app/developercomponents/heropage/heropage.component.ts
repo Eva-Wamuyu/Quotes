@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HeropageComponent implements OnInit {
 
   title: string = "Quote App";
-  mainQuote: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium`;
+  mainQuote: string = `The greatest gift I ever had came from God; I call her Mom!
+  `;
 
+  author:string = "Anonymous";
   subTopic:string = "Quotes";
   constructor() { }
 

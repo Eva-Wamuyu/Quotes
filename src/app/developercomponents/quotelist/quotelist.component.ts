@@ -10,10 +10,13 @@ export class QuotelistComponent implements OnInit {
   buttonMsg = "show more";
 
   allQuotes: Quoteclass[] = [
-    new Quoteclass ("abcd","lllll","aaaaa", new Date(2020,4,18), 0, 0),
-    new Quoteclass ("qqqq","aaaaa","bbbbbb", new Date(2022,1,17), 0, 0),
-    new Quoteclass ("ppppp","yyyy","ccccc", new Date(2022,2,11), 0, 0),
-    new Quoteclass ("00000","zzzz","xxxxx", new Date(2022,4,9), 0, 0),
+ 
+
+   
+    new Quoteclass ("Why didn’t Noah swat those two mosquitoes?","Anonymous","Wamuyu", new Date(2020,4,18), 0, 0),
+    new Quoteclass ("I’m not good at the advice. Can I interest you in a sarcastic comment?","Chandler","Eva", new Date(2022,1,17), 0, 0),
+    new Quoteclass ("People will forget what you said. People will forget what you did. But people will never forget how you made them feel.","Maya Angelou","Evex", new Date(2022,2,11), 0, 0),
+    new Quoteclass ("The trouble with being punctual is that nobody’s there to appreciate it.","Franklin P. Jones","Barbie", new Date(2022,4,9), 0, 0),
 
   ]
 
@@ -32,19 +35,13 @@ export class QuotelistComponent implements OnInit {
 
 
   pushIntoQuotesArr = (quote:Quoteclass)=>{  
-    quote.author = 'k'
-    quote.publisher = 'l'
-    quote.dateAdded = new Date();
-    quote.quote = 'm'
-    quote.upvotes = 2;
-    quote.downvotes = 2;
     this.allQuotes.push(quote);
-
-    console.log(this.allQuotes)
+    
   }
 
   pushVotes(upvotes: number, index:number){
     this.allQuotes[index].upvotes;
+    console.log(this.allQuotes[index].upvotes);
 
   }
 

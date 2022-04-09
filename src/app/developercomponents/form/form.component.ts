@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
+
 import { Quoteclass } from 'src/app/quoteclass';
 
 
@@ -10,39 +12,36 @@ import { Quoteclass } from 'src/app/quoteclass';
 export class FormComponent implements OnInit {
 
   datePosted = new Date();
-  postedQuote = new Quoteclass ("", "", "", new Date(), 0, 0);
   alertErrorShow = "d-none";
-
   @Output() postingQuote = new EventEmitter<Quoteclass>();
 
+  postedQuote! : Quoteclass;
 
-
-
- 
-
-  clearForm = ()=> {
-    this.postedQuote.author = '';
-    this.postedQuote.quote = ''
-    this.postedQuote.publisher = '';
+  clearForm = (postedQuote:any)=> {
+    postedQuote.reset();   
   }
   // addedAuthor!: string;
   // addedQuote: string = '';
   // addedPublisher: string = '';
 
-  addPostedQuote = () => {
-    if(this.postedQuote.author === "" || this.postedQuote.quote === ""|| this.postedQuote.publisher === ""){ 
+  addPostedQuote = (postedQuote:any) => {
+    if(postedQuote.author === "" ||  postedQuote.quote =="" ||postedQuote.publisher === ""){ 
       this.alertErrorShow = "d-block";
       return
     }
     else{
       this.alertErrorShow = "d-none";
-      this.postingQuote.emit(this.postedQuote);
-      console.log(this.postedQuote);
-      console.log(this.datePosted);
-      // this.clearForm();
+      postedQuote.upvotes = 0;
+      postedQuote.downvotes = 0;
+      postedQuote.dateAdded = this.datePosted;
+      this.postingQuote.emit(postedQuote);
+      postedQuote.reset();  
      
 
     }
+    
+
+    // [(ngModel)]="postedQuote.quote"
   }
 
   constructor() { }

@@ -1,27 +1,26 @@
 
-<form  (ngSubmit)="addPostedQuote()" #form='ngForm' class="w-75 m-auto" id="form">
+<form   (ngSubmit)="addPostedQuote(form.value)" #form='ngForm' class="w-75 m-auto" id="form">
    <h4> Add A Quote </h4>
    <div class="alert  alert-danger form-control py-1 {{alertErrorShow}}" role="alert"> All fields are required </div>
   <div class="form-group">
     <label for="quote">Add Quote</label>
-    <textarea name="quote" id="quote" rows="10" class="form-control" [(ngModel)]="postedQuote.quote">
+    <textarea name="quote" id="quote" rows="10" class="form-control" ngModel>
 
     </textarea>
   </div>
   <div class="form-group">
-     
     <label for="author">Add Author</label>
-    <input type="text" name="author" id="" class="form-control" [(ngModel)]="postedQuote.author">
+    <input type="text" name="author" id="" class="form-control" ngModel>
   </div>
   <div class="form-group">
     <label for="publisher">Your Name</label>
-    <input type="text" name="publisher" id="publisher" class="form-control" [(ngModel)]="postedQuote.publisher">
+    <input type="text" name="publisher" id="publisher" class="form-control" ngModel>
   </div>
 
 
   <div class="div mt-2">
   <button type="submit" class="btn btnCta float-start px-3" >Post</button>
-  <button class="btn btnLess float-end px-3" (click)="clearForm()"> Clear</button>
+  <button class="btn btnLess float-end px-3" (click)="clearForm(form)"> Clear</button>
   </div>
  
 </form>

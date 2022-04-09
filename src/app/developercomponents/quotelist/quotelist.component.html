@@ -1,10 +1,10 @@
 <div class="container"> 
   <div class="row m-auto" >
-    <div class="col-sm-12 col-md-6 quote" *ngFor="let quote of allQuotes; let i = index">
+    <div appHighlighter class="col-sm-12 col-md-6 quote p-5" *ngFor="let quote of allQuotes; let i = index">
         <p>
           {{quote.quote}}
         </p>
-        <button class="btn btnCta" (click)="toggleDetails(i)"> {{buttonMsg}} </button> 
+        <button class="btn" (click)="toggleDetails(i)"> VV </button> 
         <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
     </div>
 
