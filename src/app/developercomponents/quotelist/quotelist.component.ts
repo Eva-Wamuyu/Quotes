@@ -27,8 +27,13 @@ export class QuotelistComponent implements OnInit {
  
   
 
-  postingQuote(){
-    this.allQuotes.push()
+
+
+  pushIntoQuotesArr = (quote:any)=>{
+  
+    this.allQuotes.push(quote);
+
+
   }
 
 

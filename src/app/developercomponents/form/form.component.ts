@@ -13,11 +13,12 @@ export class FormComponent implements OnInit {
 
   @Output() postingQuote = new EventEmitter<Quoteclass>();
 
-  // addPostedQuote(){
-    
-  // }
 
-  clearForm(){
+
+
+ 
+
+  clearForm = ()=> {
     this.postedQuote.author = '';
     this.postedQuote.quote = ''
     this.postedQuote.publisher = '';
@@ -26,7 +27,7 @@ export class FormComponent implements OnInit {
   // addedQuote: string = '';
   // addedPublisher: string = '';
 
-  postQuote(){
+  addPostedQuote = () => {
     if(this.postedQuote.author === "" || this.postedQuote.quote === ""|| this.postedQuote.publisher === ""){ 
       this.alertErrorShow = "d-block";
       return;
@@ -34,7 +35,9 @@ export class FormComponent implements OnInit {
     else{
       this.alertErrorShow = "d-none";
       this.postingQuote.emit(this.postedQuote);
+      console.log(this.postedQuote);
       this.clearForm();
+     
 
     }
   }
