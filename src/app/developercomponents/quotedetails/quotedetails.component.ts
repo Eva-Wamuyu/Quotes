@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Quoteclass } from 'src/app/quoteclass';
 
 @Component({
   selector: 'app-quotedetails',
@@ -7,7 +8,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class QuotedetailsComponent implements OnInit {
 
+  @Input() quotes! : Quoteclass;
+
   @Output() toDelete = new EventEmitter<boolean>();
+  
 
   deleteQuote(del:boolean){
     this.toDelete.emit(del);

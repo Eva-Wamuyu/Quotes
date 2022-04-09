@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Quoteclass } from 'src/app/quoteclass';
 @Component({
   selector: 'app-quotelist',
@@ -7,36 +7,40 @@ import { Quoteclass } from 'src/app/quoteclass';
 })
 export class QuotelistComponent implements OnInit {
   showDetails = false;
-  buttonMsg = "show less";
+  buttonMsg = "show more";
 
   allQuotes: Quoteclass[] = [
-    new Quoteclass ("abcd","aaaaa","aaaaa"),
-    new Quoteclass ("abcd","aaaaa","aaaaa"),
-    new Quoteclass ("abcd","aaaaa","aaaaa"),
-    new Quoteclass ("abcd","aaaaa","xxxxx"),
+    new Quoteclass ("abcd","lllll","aaaaa"),
+    new Quoteclass ("qqqq","aaaaa","bbbbbb"),
+    new Quoteclass ("ppppp","yyyy","ccccc"),
+    new Quoteclass ("00000","zzzz","xxxxx"),
 
   ]
 
-  toggleDetails(){
-    this.buttonMsg == "show less"? this.buttonMsg="show more": this.buttonMsg="Hide Details";
-    this.showDetails = !this.showDetails; 
+  toggleDetails(index:number){
+    this.buttonMsg[index] == "show less"? this.buttonMsg="show more": this.buttonMsg="show less";
+   
+    this.allQuotes[index].showDetails = !this.allQuotes[index].showDetails;
+
   }
 
-  @Input() allQuotez = Quoteclass;
-  @Input() allQuots = this.allQuotes;
+ 
+  
 
   postingQuote(){
     this.allQuotes.push()
   }
 
-  addQuote(){
 
-  }
 
   deleteQuoteNow(toDelete:boolean, index:number){
     if(toDelete){
-      console.log("2");
-      this.allQuotes.splice(index, 1);
+      let confirmDelete = confirm('Are you sure to delete this quote?')
+      // console.log("2");
+      if(confirmDelete){
+        this.allQuotes.splice(index, 1);
+      }
+      
 
     }
   }

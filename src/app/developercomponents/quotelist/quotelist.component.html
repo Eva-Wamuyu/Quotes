@@ -4,13 +4,13 @@
 <div> 
 
 
-  <div *ngFor="let quote of allQuotes">
+  <div *ngFor="let quote of allQuotes; let i = index">
     <p>
       {{quote.quote}}
     </p>
 
-    <button class="btn btnCta" (click)="toggleDetails()"> {{buttonMsg}} </button> 
-    <app-quotedetails *ngIf="showDetails" (toDelete)='deleteQuoteNow($event,1)'></app-quotedetails>
+    <button class="btn btnCta" (click)="toggleDetails(i)"> {{buttonMsg}} </button> 
+    <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
   
   </div>
 

@@ -1,33 +1,31 @@
 <p>quotedetails works!</p>
 
-<!-- 
-<div class="div">
-  <p>
-    By <span> {{quote.author}} </span>
-  </p>
-  <p>
-    Posted <span>  timepassed </span> By <span> {{quote.publisher}} </span>
-  </p> 
-  
-  <div *ngIf="showDetails" class="details">
-  
-    <button class="btn btnLess" (click)="deleteQuote()">Delete</button>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing. </p>
-    <p>
-      By <span> {{quote.author}} </span>
-    </p>
-    <p>
-      Posted <span>  timepassed </span> By <span> {{quote.publisher}} </span>
-    </p>  -->
 
-  
-  <!-- </div> -->
-  
-<!--   
-  <button (click)="addUpvotes()">
+<div class="details">
+  <h3>
+    {{quotes.author}}
+  </h3>
+
+  <p>
+    Posted  daysPassed By  {{quotes.publisher}}  
+  </p>
+
+
+  <!-- <button (click)="addUpvotes()">
     upvote
   </button>
   <button (click)="addDownVotes()">
     downvote
-  </button>   -->
+  </button>  -->
+
+
   <button class="btn btnLess" (click)="deleteQuote(true)"> Delete </button> 
+
+</div>
+
+
+
+
+
+  
+

@@ -14,7 +14,6 @@ export class Quoteclass {
     this.upvotes = 0;
     this.downvotes = 0;
     
-
   }
 
 }
