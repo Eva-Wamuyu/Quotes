@@ -7,19 +7,11 @@
     Posted  daysPassed By  {{quotes.publisher}}  
   </p>
 
-  <p>
-    Upvotes: {{quotes.upvotes}}
-  </p>
-  <p>
-    Downvotes: {{quotes.downvotes}}
-  </p>
-
-
   <button (click)="addUpvotes(quotes.upvotes)">
-    <i class="fas fa-heart"></i>
+    <i class="fa fa-thumbs-up"></i> <span> {{quotes.upvotes}} </span>
   </button>
   <button (click)="addDownvotes()">
-    downvote
+    <i class="fa fa-thumbs-down"></i> <span> {{quotes.downvotes}} </span>
   </button> 
 
 
