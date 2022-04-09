@@ -7,6 +7,9 @@ import { QuotelistComponent } from './developercomponents/quotelist/quotelist.co
 import { FormComponent } from './developercomponents/form/form.component';
 import { HeropageComponent } from './developercomponents/heropage/heropage.component';
 import { QuotecomponentComponent } from './developercomponents/quotecomponent/quotecomponent.component';
+import { DatecountPipe } from './datecount.pipe';
+import { QuotedetailsComponent } from './developercomponents/quotedetails/quotedetails.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { QuotecomponentComponent } from './developercomponents/quotecomponent/qu
     QuotelistComponent,
     FormComponent,
     HeropageComponent,
-    QuotecomponentComponent
+    QuotecomponentComponent,
+    DatecountPipe,
+    QuotedetailsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

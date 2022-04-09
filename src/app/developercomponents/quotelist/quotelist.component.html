@@ -4,7 +4,19 @@
 <div> 
 
 
-  <app-quotecomponent (toDelete)='deleteQuoteNow($event,1)'></app-quotecomponent>
+  <div *ngFor="let quote of allQuotes">
+    <p>
+      {{quote.quote}}
+    </p>
+
+    <button class="btn btnCta" (click)="toggleDetails()"> {{buttonMsg}} </button> 
+    <app-quotedetails *ngIf="showDetails" (toDelete)='deleteQuoteNow($event,1)'></app-quotedetails>
+  
+  </div>
+
+
+
+  <app-quotecomponent></app-quotecomponent>
   <app-form></app-form>
  
   <!-- <app-quotecomponent></app-quotecomponent> -->

@@ -10,26 +10,15 @@ import { Quoteclass } from 'src/app/quoteclass';
 })
 export class QuotecomponentComponent implements OnInit {
 
-  @Input() quote! : Quoteclass;
-  @Output() toDelete = new EventEmitter<boolean>();
+  @Input() quotez! : Quoteclass; 
+ 
+  allQuotes :any = this.quotez;
   buttonMsg = "Show more";
-  showDetails = false;
-
+  
  
   
-  deleteQuote(del:boolean){
-    this.toDelete.emit(del);
-    
-      
-    
-  }
-
 
  
-  toggleDetails(){
-    this.buttonMsg == "show less"? this.buttonMsg="show more": this.buttonMsg="Hide Details";
-    this.showDetails = !this.showDetails; 
-  }
   
 
   constructor() { }
