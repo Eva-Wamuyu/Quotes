@@ -8,15 +8,28 @@ export class DatecountPipe implements PipeTransform {
     transform(theDate: Date): number {
 
       let today:Date = new Date();
-      let todayWithNoTime = new Date(today.getFullYear(), today.getMonth()+1, today.getDate());
-      let theDateWithNoTime = new Date(theDate.getFullYear(), theDate.getMonth()+1, theDate.getDate());
+      let todayWithNoTime = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      let theDateWithNoTime = new Date(theDate.getFullYear(), theDate.getMonth(), theDate.getDate());
       // let todayDate= today.getDate();
+
+     
+
+      let timeDifference = todayWithNoTime.getTime() - theDateWithNoTime.getTime();
       
+      let timeDiffInMs = timeDifference/(1000*60*60*24);
+      let DayDiff = timeDifference/(1000*3600*24)
+
+      if(DayDiff >=1 &&  theDateWithNoTime < todayWithNoTime){
+        return DayDiff;
+      }
+      else{
+        return 0;
+      }
       
 
-  
-    return Math.round(Math.abs(todayWithNoTime.getTime()-theDateWithNoTime.getTime())/(24*60*60*1000));
-    
+
+      
+
      
   }
 

@@ -38,8 +38,7 @@ export class FormComponent implements OnInit {
       postedQuote.dateAdded = this.datePosted;
       this.postingQuote.emit(postedQuote);
       this.alertSuccess = "d-block";
-      console.log(postedQuote.dateAdded)
-      console.log(postedQuote)
+      
       
       
       
