@@ -1,28 +1,32 @@
 
-<form   (ngSubmit)="addPostedQuote(form.value)" #form='ngForm' class="w-75 m-auto" id="form">
-   <h4> Add A Quote </h4>
+<form   (ngSubmit)="addPostedQuote(form.value)" #form='ngForm' class="w-100 m-auto py-2" id="form">
+   <h4 class="text-center mt-2"> Add A Quote </h4>
    <div class="alert  alert-danger form-control py-1 {{alertErrorShow}}" role="alert"> All fields are required </div>
   <div class="form-group">
     <label for="quote">Add Quote</label>
-    <textarea name="quote" id="quote" rows="10" class="form-control" ngModel>
+    <textarea name="quote" id="quote" rows="10" class="form-control" ngModel required>
 
     </textarea>
   </div>
   <div class="form-group">
     <label for="author">Add Author</label>
-    <input type="text" name="author" id="" class="form-control" ngModel>
+    <input type="text" name="author" id="author" placeholder="Author" class="form-control" ngModel>
   </div>
   <div class="form-group">
     <label for="publisher">Your Name</label>
-    <input type="text" name="publisher" id="publisher" class="form-control" ngModel>
+    <input type="text" name="publisher" placeholder="Your Name" id="publisher" class="form-control" ngModel>
   </div>
 
 
-  <div class="div mt-2">
-  <button type="submit" class="btn btnCta float-start px-3" >Post</button>
-  <button class="btn btnLess float-end px-3" (click)="clearForm(form)"> Clear</button>
+  <div class="div my-2 form-group">
+  <button type="submit" class="btn btnCta" >Post</button>
+
+  
+  <!-- <span class="btn btnLess float-end " (click)="clearForm(form.value)"> Clear</span> -->
   </div>
+  <!-- <div class="alert mt-2  alert-success form-control py-1 {{alertSuccess}}" role="alert"> Posted Successfully </div> -->
  
+
 </form>
 
 

@@ -13,6 +13,8 @@ export class HeropageComponent implements OnInit {
 
   author:string = "Anonymous";
   subTopic:string = "Quotes";
+
+
   constructor() { }
 
   ngOnInit(): void {

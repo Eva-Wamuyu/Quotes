@@ -13,6 +13,7 @@ export class FormComponent implements OnInit {
 
   datePosted = new Date();
   alertErrorShow = "d-none";
+  alertSuccess = "d-none"
   @Output() postingQuote = new EventEmitter<Quoteclass>();
 
   postedQuote! : Quoteclass;
@@ -20,14 +21,15 @@ export class FormComponent implements OnInit {
   clearForm = (postedQuote:any)=> {
     postedQuote.reset();   
   }
+
   // addedAuthor!: string;
   // addedQuote: string = '';
   // addedPublisher: string = '';
 
   addPostedQuote = (postedQuote:any) => {
-    if(postedQuote.author === "" ||  postedQuote.quote =="" ||postedQuote.publisher === ""){ 
+    if(postedQuote.author === "" ||  postedQuote.quote ==="" ||postedQuote.publisher === ""){ 
       this.alertErrorShow = "d-block";
-      return
+      return;
     }
     else{
       this.alertErrorShow = "d-none";
@@ -35,13 +37,21 @@ export class FormComponent implements OnInit {
       postedQuote.downvotes = 0;
       postedQuote.dateAdded = this.datePosted;
       this.postingQuote.emit(postedQuote);
-      postedQuote.reset();  
-     
-
-    }
+      this.alertSuccess = "d-block";
+      console.log(postedQuote.dateAdded)
+      console.log(postedQuote)
+      
+      
+      
+      
     
-
+    }
     // [(ngModel)]="postedQuote.quote"
+  }
+
+  hideForm = () => {
+      
+    
   }
 
   constructor() { }

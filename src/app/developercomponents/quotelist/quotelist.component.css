@@ -1,7 +1,17 @@
 .quote{
   /* height: 50vh; */
-  text-align: center;
-  /* box-shadow: inset 6px 6px 13px #fff, 6px 6px 13px rgba(0, 0, 0, .16); */
-  background-color: #ecf0f3;
-  /* overflow: auto; */
+text-align: center;
+box-shadow: inset 6px 6px 13px #fff, 6px 6px 13px rgba(0, 0, 0, .16); 
+background-color: #ecf0f3;
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+overflow: hidden;
+}
+.form{
+  width: clamp(320px, 50vw, 676px);
+  
 }

@@ -7,13 +7,17 @@ import { Quoteclass } from 'src/app/quoteclass';
 })
 export class QuotelistComponent implements OnInit {
   showDetails = false;
+  showForm = false;
+  title:string = "Quotes";
   buttonMsg = "show more";
+  btnMessage = "Add Quote";
+  
 
   allQuotes: Quoteclass[] = [
  
 
    
-    new Quoteclass ("Why didn’t Noah swat those two mosquitoes?","Anonymous","Wamuyu", new Date(2020,4,18), 0, 0),
+    new Quoteclass ("Why didn’t Noah swat those two mosquitoes?","Anonymous","Wamuyu", new Date(2020,4,19), 0, 0),
     new Quoteclass ("I’m not good at the advice. Can I interest you in a sarcastic comment?","Chandler","Eva", new Date(2022,1,17), 0, 0),
     new Quoteclass ("People will forget what you said. People will forget what you did. But people will never forget how you made them feel.","Maya Angelou","Evex", new Date(2022,2,11), 0, 0),
     new Quoteclass ("The trouble with being punctual is that nobody’s there to appreciate it.","Franklin P. Jones","Barbie", new Date(2022,4,9), 0, 0),
@@ -26,7 +30,13 @@ export class QuotelistComponent implements OnInit {
     this.allQuotes[index].showDetails = !this.allQuotes[index].showDetails;
 
   }
+  
 
+
+  displayForm = ()=>{
+    this.showForm = !this.showForm;
+    this.btnMessage == "Close" ? this.btnMessage = "Add Quote": this.btnMessage = "Close";
+  }
 
 
  

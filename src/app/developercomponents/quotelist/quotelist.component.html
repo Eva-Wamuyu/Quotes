@@ -1,20 +1,23 @@
-<div class="container"> 
-  <div class="row m-auto" >
-    <div appHighlighter class="col-sm-12 col-md-6 quote p-5" *ngFor="let quote of allQuotes; let i = index">
+<div class="container text-center"> 
+  <button  (click)="displayForm()">{{btnMessage}}</button>
+  <div *ngIf="showForm" class="col-sm-12 m-auto form">
+    <app-form (postingQuote) = 'pushIntoQuotesArr($event)'></app-form>
+  </div>
+  <h2 class="mt-5">{{title}}</h2>
+  <div class="row m-auto">
+    <div appHighlighte class="col-sm-12 col-md-5 m-2 quote p-5" *ngFor="let quote of allQuotes; let i = index">
         <p>
           {{quote.quote}}
         </p>
-        <button class="btn" (click)="toggleDetails(i)"> VV </button> 
+        <button class=" btn" (click)="toggleDetails(i)"> ▼ </button> 
         <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
     </div>
 
-    <div class="col-sm-12 m-auto">
-      <app-form (postingQuote) = 'pushIntoQuotesArr($event)'></app-form>
-    </div>
+  
    
   </div>
+ 
 </div>
-
    
 
    

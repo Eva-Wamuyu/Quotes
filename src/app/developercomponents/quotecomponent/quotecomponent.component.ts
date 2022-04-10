@@ -16,7 +16,8 @@ export class QuotecomponentComponent implements OnInit {
   buttonMsg = "Show more";
   
  
-  
+  instructions = `Add a quote. New quote goes at the end of the list.
+  `
 
  
   

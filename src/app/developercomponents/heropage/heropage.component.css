@@ -1,6 +1,7 @@
 .heroS{
   width: clamp(300px, 50vw, 580px);
   margin: auto;
-  text-align: left;
+  text-align: center;
+  
 
 }

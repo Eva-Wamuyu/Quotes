@@ -1,3 +1,16 @@
 .hero{
-  height: 50vh;
+  /* height: 20vh; */
+  background-image: linear-gradient(to left, #00C9FF, #92FE9D);
+  background-image: url("../assets/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffff;
+  
+
+}
+
+.center{
+  margin: auto;
+  width: clamp(300px, 50vw, 580px);
+  text-align: center;
 }

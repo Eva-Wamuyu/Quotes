@@ -1,3 +1,27 @@
 textarea{
   resize: none;
 }
+textarea, input{
+  background-color: rgba(212, 212, 212, 0.25);
+  border: none;
+  box-shadow: inset 6px 6px 13px #fff;
+
+  
+}
+textarea:focus, input:focus{
+  background-color: 	#DCDCDC;
+}
+#form{
+  background-image: url(../../../assets/dandelion-g032302876_1920.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 12px;
+  height: 84vh;
+  color: white;
+
+  
+}
+::placeholder{
+  color: white;
+}

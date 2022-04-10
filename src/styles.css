@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Poppins:wght@300&display=swap');
 
 .btnCta{
-  background-color: #692705;
-  color: #ffff;
+  background-color: white;
+  color: black;
+  box-shadow: inset 6px 6px 13px #fff, 6px 6px 13px rgba(0, 0, 0, .16);
 }
 .btnLess{
   background-color: #Efc7bc;
+}
+div{
+  font-family: 'Roboto Slab', serif;
 }

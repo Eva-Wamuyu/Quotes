@@ -6,11 +6,13 @@
   </h4>
 
   <p>
-    Posted  daysPassed By  {{quotes.publisher}}  
+    Posted  {{quotes.dateAdded|datecount}} day/days ago  <br> By
+     <span class="publisher"> {{quotes.publisher}} </span>  
   </p>
 </div>
 <div>
   
+<div class="float-start">
   <button (click)="addUpvotes(quotes.upvotes)" class="float-start btn">
     <i class="fa fa-thumbs-up"></i> <span> {{quotes.upvotes}} </span>
   </button>
@@ -19,10 +21,13 @@
   </button> 
 </div>
 
-<div class="del">
-  <button class="btn" (click)="deleteQuote(true)"> <i class="fa fa-trash" aria-hidden="true"></i></button> 
-
+  <div class="del float-end">
+    <button class="btn" (click)="deleteQuote(true)"> <i class="fa fa-trash text-danger" aria-hidden="true"></i></button> 
+  
+  </div>
 </div>
+
+
  
 
 </div>
