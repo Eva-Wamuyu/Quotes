@@ -9,7 +9,6 @@ export class QuotelistComponent implements OnInit {
   showDetails = false;
   showForm = false;
   title:string = "Quotes";
-  buttonMsg = "show more";
   btnMessage = "Add Quote";
   
 
@@ -25,14 +24,14 @@ export class QuotelistComponent implements OnInit {
   ]
 
   toggleDetails(index:number){
-    this.buttonMsg[index] == "show more"? this.buttonMsg="show less": this.buttonMsg="show more";
+    
    
     this.allQuotes[index].showDetails = !this.allQuotes[index].showDetails;
 
   }
 
-  quoteUpvotes: number[] = this.allQuotes.map(quote=>quote.upvotes);
-  popularQuote = Math.max(...this.quoteUpvotes); 
+  // quoteUpvotes: number[] = this.allQuotes.map(quote=>quote.upvotes);
+  // popularQuote = Math.max(...this.quoteUpvotes); 
 
   displayForm = ()=>{
     this.showForm = !this.showForm;

@@ -26,7 +26,7 @@ export class FormComponent implements OnInit {
   // addedQuote: string = '';
   // addedPublisher: string = '';
 
-  addPostedQuote = (postedQuote:any) => {
+  addPostedQuote = (postedQuote:Quoteclass) => {
     if(postedQuote.author === "" ||  postedQuote.quote ==="" ||postedQuote.publisher === ""){ 
       this.alertErrorShow = "d-block";
       return;
@@ -37,7 +37,7 @@ export class FormComponent implements OnInit {
       postedQuote.downvotes = 0;
       postedQuote.dateAdded = this.datePosted;
       this.postingQuote.emit(postedQuote);
-      postedQuote = new Quoteclass("","","",new Date(),0,0);
+    
        
 
       
