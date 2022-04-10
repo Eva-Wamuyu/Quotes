@@ -8,6 +8,17 @@ The site allows the user to add, delete and upvote or downvote a quote.
 ## Live-Link
 https://eva-wamuyu.github.io/Quotes/
 
+## Technologies and Langs
+* TS
+* Angular
+* CSS
+* HTML
+* Bootstrap
+
+## Contact-Info
+
+* Email: rutheve.eva@gmail.com
+* Twitter: [@Ruth_Eva](https://twitter.com/Ruth_Eva_?t=_DEEkzJ3K0Qzr1npwZ7ggw&s=09)
 ##  Installation
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
