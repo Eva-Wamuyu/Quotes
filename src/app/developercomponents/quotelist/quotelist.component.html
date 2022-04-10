@@ -1,5 +1,5 @@
 <div class="container text-center"> 
-  <button  (click)="displayForm()">{{btnMessage}}</button>
+  <button class="my-2"  (click)="displayForm()">{{btnMessage}}</button>
   <div *ngIf="showForm" class="col-sm-12 m-auto form">
     <app-form (postingQuote) = 'pushIntoQuotesArr($event)'></app-form>
   </div>
