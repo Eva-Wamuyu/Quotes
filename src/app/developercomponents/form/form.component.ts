@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
   postedQuote! : Quoteclass;
 
   clearForm = (postedQuote:any)=> {
-    postedQuote.reset();   
+    postedQuote.resetForm();   
   }
 
   // addedAuthor!: string;
@@ -38,6 +38,9 @@ export class FormComponent implements OnInit {
       postedQuote.dateAdded = this.datePosted;
       this.postingQuote.emit(postedQuote);
       this.alertSuccess = "d-block";
+      
+      
+      
       
       
       

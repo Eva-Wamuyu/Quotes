@@ -10,6 +10,8 @@ import { Quoteclass } from 'src/app/quoteclass';
 })
 export class QuotecomponentComponent implements OnInit {
 
+
+  ///To make this component determine the major quote
   @Input() quotez! : Quoteclass; 
  
   allQuotes :any = this.quotez;
@@ -17,10 +19,7 @@ export class QuotecomponentComponent implements OnInit {
   
  
   instructions = `Add a quote. New quote goes at the end of the list.
-  `
-
- 
-  
+  ` 
 
   constructor() { }
 

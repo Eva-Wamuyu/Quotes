@@ -30,8 +30,9 @@ export class QuotelistComponent implements OnInit {
     this.allQuotes[index].showDetails = !this.allQuotes[index].showDetails;
 
   }
-  
 
+  quoteUpvotes: number[] = this.allQuotes.map(quote=>quote.upvotes);
+  popularQuote = Math.max(...this.quoteUpvotes); 
 
   displayForm = ()=>{
     this.showForm = !this.showForm;

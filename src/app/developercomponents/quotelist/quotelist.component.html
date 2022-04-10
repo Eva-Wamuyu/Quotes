@@ -5,12 +5,25 @@
   </div>
   <h2 class="mt-5">{{title}}</h2>
   <div class="row m-auto">
-    <div appHighlighte class="col-sm-12 col-md-5 m-2 quote p-5" *ngFor="let quote of allQuotes; let i = index">
-        <p>
+    <div   class="col-sm-12 col-md-5 m-2 quote p-5" *ngFor="let quote of allQuotes; let i = index;">
+      <div *ngIf='popularQuote  ; then higlighted else noHighlight'>
+
+      </div>
+      <ng-template #noHighlight >
+        <p >
           {{quote.quote}}
         </p>
         <button class=" btn" (click)="toggleDetails(i)"> ▼ </button> 
         <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
+      </ng-template>
+      <ng-template #higlighted>
+        <p appHighlighter>
+          {{quote.quote}}
+        </p>
+        <button class=" btn" (click)="toggleDetails(i)"> ▼ </button> 
+        <app-quotedetails *ngIf="quote.showDetails" (toDelete)='deleteQuoteNow($event,i)' [quotes]='quote' >  </app-quotedetails>
+      </ng-template>
+   
     </div>
 
   
