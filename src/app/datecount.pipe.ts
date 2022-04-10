@@ -16,7 +16,7 @@ export class DatecountPipe implements PipeTransform {
 
       let timeDifference = todayWithNoTime.getTime() - theDateWithNoTime.getTime();
       
-      let timeDiffInMs = timeDifference/(1000*60*60*24);
+   
       let DayDiff = timeDifference/(1000*3600*24)
 
       if(DayDiff >=1 &&  theDateWithNoTime < todayWithNoTime){
