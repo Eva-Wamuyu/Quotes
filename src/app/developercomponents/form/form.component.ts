@@ -37,24 +37,15 @@ export class FormComponent implements OnInit {
       postedQuote.downvotes = 0;
       postedQuote.dateAdded = this.datePosted;
       this.postingQuote.emit(postedQuote);
-      this.alertSuccess = "d-block";
+      postedQuote = new Quoteclass("","","",new Date(),0,0);
+       
+
       
-      
-      
-      
-      
-      
-      
-      
-    
     }
     // [(ngModel)]="postedQuote.quote"
   }
 
-  hideForm = () => {
-      
-    
-  }
+
 
   constructor() { }
 

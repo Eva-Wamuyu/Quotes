@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeropageComponent implements OnInit {
 
-  title: string = "Quote App";
+  title: string = "Ev Quotes";
   mainQuote: string = `The greatest gift I ever had came from God; I call her Mom!
   `;
 
